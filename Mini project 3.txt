@@ -1,0 +1,81 @@
+Mini Project 3: Vaccination Center
+Project objective: 
+Build an application to manage vaccination centers working on distributing vaccines to all citizens of 
+India
+Background of the problem statement:
+You have been hired by the Government of India as a Full Stack Developer, with the aim of creating 
+an application prototype that would support the vaccination of all citizens of India.
+The application would:
+• Help citizens reach out to the centers for their vaccinations
+• Track the vaccination status of all citizens in the country
+• Track vaccination centers in each city
+• Support the use of CRUD database operations for the citizen and vaccination center data
+• Map users to specific vaccination centre’s
+Project tasks:
+• Create a database using MySQL
+• Create the necessary code for the various layers of the application
+o Entity Layer: Create Vaccine Center and User entities with appropriate relationship 
+mappings
+o Repository Layer: Create a layer for all database operations
+o Service Layer: Demonstrate dependency injection and interface segregation principle
+o Controller Layer: Expose necessary APIs such as:
+1. Add citizens to the database
+2. Retrieve all citizens
+3. Retrieve a specific citizen
+4. Retrieve all vaccination centers
+5. Retrieve a specific vaccination center by ID
+6. Retrieve a specific vaccination center and all its citizens in that city
+The flow and features of the application: 
+• User can add the data of citizens to the MySQL database.
+• User can retrieve all the citizens. 
+• User can retrieve the data of a specific citizen using id.
+• Users can track the vaccination status of all citizens in the country.
+• User can add a vaccination center to MySQL database.
+• Users can map every citizen with a specific vaccination center.
+• Users can enter a center id, and all citizens associated with that center will be retrieved.
+• Users can retrieve all the vaccination centers. 
+• Users can retrieve a specific vaccination center by its id.
+• Users can update the citizen’s data.
+• Users can enter a citizen ID and delete that citizen's data.
+• Users can update the data of the vaccination center.
+• Users can enter a center id and delete that center's data.
+Technology Specification:
+The following technologies are used in the development of this application:
+• Java
+• Spring Boot
+• Spring Data JPA
+• Spring MVC
+• MySQL Database
+Validation (Frontend/Backend):
+• Users can retrieve the data of any citizen only if a valid ID has been provided.
+• Users can retrieve the data of any vaccination center only if the valid center id has been 
+provided.
+• Vaccination status of any citizen must be fully vaccinated only if the count of vaccination is 2 
+for each citizen.
+Business Logic/Exception Scenarios:
+• Each citizen must be mapped with only one vaccination center. That means there will be 
+One to One mapping between citizens and vaccination centers.
+• If the mapping is already done for any citizen and again the user tries to map the citizen with 
+another vaccination center, then the respective error message must be displayed.
+The following requirements should be met:
+• A high-quality application, including the features mentioned above, validations, and business 
+logic, should be delivered at the end of the project.
+API Endpoints:
+Sr. No. API Endpoint
+1 Retrieve all citizens http://localhost:8086/citizens
+2 Retrieve a specific citizen http://localhost:8086/citizens/1
+3 Retrieve all citizens associated with a 
+specific center
+http://localhost:8086/citizens/center/1
+4 Retrieve all vaccination centers http://localhost:8086/vaccinationcenter/
+5 Retrieve a specific vaccination center http://localhost:8086/vaccinationcenter/1
+6 Connecting endpoint between
+vaccination center and citizens
+http://localhost:8086/vaccinationcenter/citizens/
+7 Update data of a specific citizen http://localhost:8086/citizens/
+8 Delete data of a specific citizen http://localhost:8086/citizens/1
+9 Update data of a specific vaccination center http://localhost:8086/vaccinationcenter/
+10 Delete a specific vaccination center http://localhost:8086/vaccinationcenter/1
+Note:
+1. Do the APIs Functional Testing using Postman.
+2. Create the documentation for these APIs using Swagger
